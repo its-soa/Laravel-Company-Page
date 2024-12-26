@@ -68,160 +68,37 @@
                 <div class="col-lg-9">
                     <div class="me-lg-4">
                         <div class="row gy-5">
-                            <div class="col-md-6" data-aos="fade">
-                                <article class="blog-post">
-                                    <div class="post-slider slider-sm rounded">
-                                        <img loading="lazy" decoding="async" src="images/blog/post-4.jpg"
-                                            alt="Post Thumbnail">
-
-                                    </div>
-                                    <div class="pt-4">
-                                        <p class="mb-3">15 Mar, 2020</p>
-                                        <h2 class="h4"><a class="text-black" href="blog-details.html">Lorem, ipsum
-                                                dolor sit amet consectetur adipisicing elit.</a></h2>
-                                        <p>Heading example Here is example of hedings. You can use this heading by
-                                            following …</p> <a href="blog-details.html" class="text-primary fw-bold"
-                                            aria-label="Read the full article by clicking here">Read More</a>
-                                    </div>
-                                </article>
-                            </div>
-                            <div class="col-md-6" data-aos="fade">
-                                <article class="blog-post">
-                                    <div class="post-slider slider-sm rounded">
-                                        <img loading="lazy" decoding="async" src="images/blog/post-1.jpg"
-                                            alt="Post Thumbnail">
-                                    </div>
-                                    <div class="pt-4">
-                                        <p class="mb-3">14 Mar, 2020</p>
-                                        <h2 class="h4"><a class="text-black" href="blog-details.html">Cheerful
-                                                Loving Couple Bakers Drinking Coffee</a></h2>
-                                        <p>It’s no secret that the digital industry is booming. From exciting startups
-                                            to global …</p> <a href="blog-details.html" class="text-primary fw-bold"
-                                            aria-label="Read the full article by clicking here">Read More</a>
-                                    </div>
-                                </article>
-                            </div>
-                            <div class="col-md-6" data-aos="fade">
-                                <article class="blog-post">
-                                    <div class="post-slider slider-sm rounded">
-                                        <img loading="lazy" decoding="async" src="images/blog/post-2.jpg"
-                                            alt="Post Thumbnail">
-                                    </div>
-                                    <div class="pt-4">
-                                        <p class="mb-3">14 Mar, 2020</p>
-                                        <h2 class="h4"><a class="text-black" href="blog-details.html">Cheerful
-                                                Loving Couple Bakers Drinking Coffee</a></h2>
-                                        <p>It’s no secret that the digital industry is booming. From exciting startups
-                                            to global …</p> <a href="blog-details.html" class="text-primary fw-bold"
-                                            aria-label="Read the full article by clicking here">Read More</a>
-                                    </div>
-                                </article>
-                            </div>
-                            <div class="col-md-6" data-aos="fade">
-                                <article class="blog-post">
-                                    <div class="post-slider slider-sm rounded">
-                                        <img loading="lazy" decoding="async" src="images/blog/post-3.jpg"
-                                            alt="Post Thumbnail">
-                                    </div>
-                                    <div class="pt-4">
-                                        <p class="mb-3">14 Mar, 2020</p>
-                                        <h2 class="h4"><a class="text-black" href="blog-details.html">Cheerful
-                                                Loving Couple Bakers Drinking Coffee</a></h2>
-                                        <p>It’s no secret that the digital industry is booming. From exciting startups
-                                            to global …</p> <a href="blog-details.html" class="text-primary fw-bold"
-                                            aria-label="Read the full article by clicking here">Read More</a>
-                                    </div>
-                                </article>
-                            </div>
-                            <div class="col-md-6" data-aos="fade">
-                                <article class="blog-post">
-                                    <div class="post-slider slider-sm rounded">
-                                        <img loading="lazy" decoding="async" src="images/blog/post-4.jpg"
-                                            alt="Post Thumbnail">
-                                    </div>
-                                    <div class="pt-4">
-                                        <p class="mb-3">14 Mar, 2020</p>
-                                        <h2 class="h4"><a class="text-black" href="blog-details.html">Cheerful
-                                                Loving Couple Bakers Drinking Coffee</a></h2>
-                                        <p>It’s no secret that the digital industry is booming. From exciting startups
-                                            to global …</p> <a href="blog-details.html" class="text-primary fw-bold"
-                                            aria-label="Read the full article by clicking here">Read More</a>
-                                    </div>
-                                </article>
-                            </div>
-                            <div class="col-md-6" data-aos="fade">
-                                <article class="blog-post">
-                                    <div class="post-slider slider-sm rounded">
-                                        <img loading="lazy" decoding="async" src="images/blog/post-5.jpg"
-                                            alt="Post Thumbnail" width="420" height="280">
-                                    </div>
-                                    <div class="pt-4">
-                                        <p class="mb-3">14 Mar, 2020</p>
-                                        <h2 class="h4"><a class="text-black" href="blog-details.html">Cheerful
-                                                Loving Couple Bakers Drinking Coffee</a></h2>
-                                        <p>It’s no secret that the digital industry is booming. From exciting startups
-                                            to global …</p> <a href="blog-details.html" class="text-primary fw-bold"
-                                            aria-label="Read the full article by clicking here">Read More</a>
-                                    </div>
-                                </article>
-                            </div>
+                            @if ($posts->isNotEmpty())
+                                @foreach ($posts as $post)
+                                    <x-post-card :post="$post" />
+                                @endforeach
+                            @endif
                             <div class="col-12">
-                                <nav class="mt-4">
-                                    <!-- pagination -->
-                                    <nav class="mb-md-50">
-                                        <ul class="pagination justify-content-center">
-                                            <li class="page-item active "> <a href="blog.html" class="page-link">
-                                                    1
-                                                </a>
-                                            </li>
-                                            <li class="page-item"> <a href="blog.html" class="page-link">
-                                                    2
-                                                </a>
-                                            </li>
-                                            <li class="page-item">
-                                                <a class="page-link" href="blog.html" aria-label="Pagination Arrow">
-                                                    <i class="fas fa-angle-right"></i>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </nav>
-                                </nav>
+                                {{ $posts->links() }}
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3">
                     <!-- categories -->
-                    <div class="widget widget-categories">
-                        <h5 class="widget-title"><span>Category</span></h5>
-                        <ul class="list-unstyled widget-list">
-                            <li><a href="#!">Technology <small class="ml-auto">(1)</small></a>
-                            </li>
-                            <li><a href="#!">Fashion <small class="ml-auto">(1)</small></a>
-                            </li>
-                            <li><a href="#!">Photography <small class="ml-auto">(2)</small></a>
-                            </li>
-                            <li><a href="#!">Videography <small class="ml-auto">(1)</small></a>
-                            </li>
-                        </ul>
-                    </div>
+                    @if ($categories->isNotEmpty())
+                        <div class="widget widget-categories">
+                            <h5 class="widget-title"><span>Category</span></h5>
+                            <ul class="list-unstyled widget-list">
+                                @foreach ($categories as $category)
+                                    <li><a href="{{ route('blog') . '?categorySlug=' . $category->short_desc }}">{{ $category->title }}
+                                        </a>
+                                        {{-- <small class="ml-auto">(1)</small> --}}
+                                    </li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
                     <!-- tags -->
                     <div class="widget widget-tags">
                         <h4 class="widget-title"><span>Tags</span></h4>
                         <ul class="list-inline widget-list widget-list-inline taxonomies-list">
                             <li class="list-inline-item"><a href="#!">Booth</a>
-                            </li>
-                            <li class="list-inline-item"><a href="#!">City</a>
-                            </li>
-                            <li class="list-inline-item"><a href="#!">Image</a>
-                            </li>
-                            <li class="list-inline-item"><a href="#!">New</a>
-                            </li>
-                            <li class="list-inline-item"><a href="#!">Photo</a>
-                            </li>
-                            <li class="list-inline-item"><a href="#!">Seasone</a>
-                            </li>
-                            <li class="list-inline-item"><a href="#!">Video</a>
                             </li>
                         </ul>
                     </div>
@@ -229,51 +106,29 @@
                     <div class="widget">
                         <h5 class="widget-title"><span>Latest Article</span></h5>
                         <!-- post-item -->
-                        <ul class="list-unstyled widget-list">
-                            <li class="d-flex widget-post align-items-center">
-                                <a class="text-black" href="/blog/elements/">
-                                    <div class="widget-post-image flex-shrink-0 me-3">
-                                        <img class="rounded" loading="lazy" decoding="async"
-                                            src="images/blog/post-4.jpg" alt="Post Thumbnail">
-                                    </div>
-                                </a>
-                                <div class="flex-grow-1">
-                                    <h5 class="h6 mb-0"><a class="text-black" href="blog-details.html">Elements That
-                                            You Can Use To Create A New Post On This Template.</a></h5>
-                                    <small>March 15, 2020</small>
-                                </div>
-                            </li>
-                        </ul>
-                        <ul class="list-unstyled widget-list">
-                            <li class="d-flex widget-post align-items-center">
-                                <a class="text-black" href="/blog/post-1/">
-                                    <div class="widget-post-image flex-shrink-0 me-3">
-                                        <img class="rounded" loading="lazy" decoding="async"
-                                            src="images/blog/post-1.jpg" alt="Post Thumbnail">
-                                    </div>
-                                </a>
-                                <div class="flex-grow-1">
-                                    <h5 class="h6 mb-0"><a class="text-black" href="blog-details.html">Cheerful
-                                            Loving Couple Bakers Drinking Coffee</a></h5>
-                                    <small>March 14, 2020</small>
-                                </div>
-                            </li>
-                        </ul>
-                        <ul class="list-unstyled widget-list">
-                            <li class="d-flex widget-post align-items-center">
-                                <a class="text-black" href="/blog/post-2/">
-                                    <div class="widget-post-image flex-shrink-0 me-3">
-                                        <img class="rounded" loading="lazy" decoding="async"
-                                            src="images/blog/post-2.jpg" alt="Post Thumbnail">
-                                    </div>
-                                </a>
-                                <div class="flex-grow-1">
-                                    <h5 class="h6 mb-0"><a class="text-black" href="blog-details.html">Cheerful
-                                            Loving Couple Bakers Drinking Coffee</a></h5>
-                                    <small>March 14, 2020</small>
-                                </div>
-                            </li>
-                        </ul>
+                        @if ($latestBlog->isNotEmpty())
+                            @foreach ($latestBlog as $latestpost)
+                                <ul class="list-unstyled widget-list">
+                                    <li class="d-flex widget-post align-items-center">
+                                        <a class="text-black" wire:navigate href="{{ route('post', $latestpost->id) }}" >
+                                            <div class="widget-post-image flex-shrink-0 me-3">
+                                                <img class="rounded" loading="lazy" decoding="async"
+                                                    src=" {{ asset('storage/' . $latestpost->image) }}"
+                                                    alt="Post Thumbnail">
+                                            </div>
+                                        </a>
+                                        <div class="flex-grow-1">
+                                            <h5 class="h6 mb-0"><a class="text-black"
+                                                    wire:navigate href="{{ route('post', $latestpost->id) }}">{{ $latestpost->title }}.</a></h5>
+                                            <small>
+                                                {{ \Carbon\Carbon::parse($latestpost->created_at)->format('d M, Y') }}</small>
+                                        </div>
+                                    </li>
+                                </ul>
+                            @endforeach
+                        @endif
+
+
                     </div>
                     <!-- Social -->
 

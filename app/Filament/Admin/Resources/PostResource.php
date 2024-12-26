@@ -55,6 +55,26 @@ class PostResource extends Resource
                     ->required(),
                 FileUpload::make('image')
                     ->image(),
+                // Select::make('category_id')
+                //     // ->relationship(name: 'author', titleAttribute: 'name')
+                //     ->label('Category')
+                //     ->options(Category::all()->pluck('title', 'id'))
+                //     ->isCreatable() // Allows users to create a new option
+                //     ->createOptionUsing(function (string $name) {
+                //         // Logic to create a new Category in the database
+                //         $category = Category::create(['title' => $name]);
+
+                //         // Return the ID of the newly created option
+                //         return $category->id;
+                //     })
+                //     ->createOptionForm([
+                //         Forms\Components\TextInput::make('title')
+                //             ->required()
+                //             ->live()
+                //             ->afterStateUpdated(fn(Set $set, ?string $state) => $set('short_desc', Str::slug($state))),
+                //         Forms\Components\TextInput::make('short_desc')
+                //             ->required(),
+                //     ]),
                 Select::make('category_id')
                     ->label('Category')
                     ->options(Category::all()->pluck('title', 'id')),
@@ -74,8 +94,8 @@ class PostResource extends Resource
             ->columns([
                 ImageColumn::make('image'),
                 TextColumn::make('title')->searchable()->label('Name'),
-                TextColumn::make('user_id')->label('Author'),
-                TextColumn::make('category_id')->label('Category'),
+                TextColumn::make('author.name')->label('Author'),
+                TextColumn::make('category.title')->label('Category'),
                 CheckboxColumn::make('status'),
             ])
             ->filters([
