@@ -43,13 +43,13 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav m-auto mb-2 mb-lg-0">
                         <li class="nav-item"> <a wire:navigate class="nav-link" href="{{ route('home') }}">Home</a></li>
-                        <li class="nav-item "> <a wire:navigate class="nav-link" href="about.html">About Us</a></li>
+                        <li class="nav-item "> <a wire:navigate class="nav-link" href="{{ route('teams') }}">About Us</a></li>
                         <li class="nav-item "> <a wire:navigate class="nav-link" href="{{ route('servicePage') }}">Services</a></li>
-                        <li class="nav-item "> <a wire:navigate class="nav-link" href="team.html">Our Team</a></li>
-                        <li class="nav-item "><a wire:navigate class="nav-link " href="blog.html">Blog</a></li>
-                        <li class="nav-item "><a wire:navigate class="nav-link " href="faq.html">FAQ</a></li>
+                        <li class="nav-item "> <a wire:navigate class="nav-link" href="{{ route('teams') }}">Our Team</a></li>
+                        <li class="nav-item "><a wire:navigate class="nav-link " href="{{ route('blog') }}">Blog</a></li>
+                        <li class="nav-item "><a wire:navigate class="nav-link " href="{{ route('teams') }}">FAQ</a></li>
                     </ul>
-                    <a href="/admin/login" class="btn btn-outline-primary">Contact Us</a>
+                    <a href="/admin/login" class="btn btn-outline-primary">Admin Login</a>
                 </div>
             </div>
         </nav>

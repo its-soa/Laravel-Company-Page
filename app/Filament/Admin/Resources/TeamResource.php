@@ -39,12 +39,15 @@ class TeamResource extends Resource
                     ->placeholder('Enter Designation Here'),
                 TextInput::make('fb_url')
                     ->maxLength(255)
+                    ->url()
                     ->label('Facebook URL'),
                 TextInput::make('tw_url')
                     ->maxLength(255)
+                    ->url()
                     ->label('Twitter URL'),
                 TextInput::make('ig_url')
                     ->maxLength(255)
+                    ->url()
                     ->label('Instagram URL'),
                 FileUpload::make('image')
                     ->image(),
@@ -92,7 +95,7 @@ class TeamResource extends Resource
             ->actions([
                 Tables\Actions\EditAction::make(),
                 // CreateAction::make()->successRedirectUrl(route('/')),
-         
+
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([

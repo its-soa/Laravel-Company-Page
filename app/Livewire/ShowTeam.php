@@ -2,12 +2,17 @@
 
 namespace App\Livewire;
 
+use App\Models\Team;
 use Livewire\Component;
 
 class ShowTeam extends Component
 {
     public function render()
     {
-        return view('livewire.show-team');
+        $team = Team::latest()->get();
+        // dd($team);
+        return view('livewire.show-team', [
+            'team' => $team,
+        ]);
     }
 }
