@@ -37,8 +37,8 @@ class CategoryResource extends Resource
                     ->afterStateUpdated(fn(Set $set, ?string $state) => $set('short_desc', Str::slug($state)))
                     ->required(),
                 TextInput::make('short_desc')
-                ->label('Slug')
-                ->required(),
+                    ->label('Slug')
+                    ->required(),
                 Select::make('status')->options([
                     1 => 'Active',
                     0 => 'Disabled'
